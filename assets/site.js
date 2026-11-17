@@ -64,24 +64,28 @@ function enhanceGallery(group) {
     figures.forEach((figure, i) => { figure.hidden = i !== current; });
     count.textContent = "Figure " + (current + 1) + " of " + figures.length;
   }
+  function step(delta) {
+    show(current + delta);
+  }
   function makeButton(label, mark, delta) {
     const button = document.createElement("button");
     button.type = "button";
     button.setAttribute("aria-label", label);
     button.textContent = mark;
-    button.addEventListener("click", () => show(current + delta));
+    button.addEventListener("click", () => step(delta));
     return button;
   }
   controls.append(makeButton("Previous figure", "←", -1), count, makeButton("Next figure", "→", 1));
   controls.addEventListener("keydown", event => {
     if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
     event.preventDefault();
-    show(current + (event.key === "ArrowRight" ? 1 : -1));
+    step(event.key === "ArrowRight" ? 1 : -1);
   });
   group.classList.add("enhanced");
   group.setAttribute("role", "group");
   group.append(controls);
   show(0);
+
 }
 document.querySelectorAll(".figure-set").forEach(enhanceGallery);
 
