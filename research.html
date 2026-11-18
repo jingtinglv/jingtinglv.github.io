@@ -25,77 +25,104 @@
     <header class="research-intro">
       <a class="more back" href="index.html#research"><span aria-hidden="true">←</span> Back to overview</a>
       <h1>Research</h1>
-      <p>What happens when a piece of mobile DNA finds a lasting role in its host? I study this question in insects using evolutionary genomics and single-cell data. I also build resources that help other researchers ask questions of their own.</p>
-      <p class="phd-interest">I’m seeking a PhD in bioinformatics or computational biology. Inspired by Pasteur’s Quadrant, I hope to pursue fundamental questions with a clear path to improving human well-being.</p>
     </header>
     <div class="research-layout">
-      <nav class="contents" aria-label="Research projects">
-        <p class="kicker">On this page</p>
-        <a href="#insect-adaptation">Insect adaptation</a>
-        <a href="#bumblebee-brain">Bumblebee brain genes</a>
-        <a href="#ibumblebee">iBumblebee</a>
-        <a href="#short-tandem-repeats">Short tandem repeats</a>
-        <a href="#modeling">Modeling &amp; AI</a>
-        <a href="#fusionbert" class="contents-sub">FusionBERT-CNN</a>
+      <nav class="contents" aria-label="Research themes and projects">
+        <p class="kicker">Research themes</p>
+        <div class="contents-group">
+          <a class="contents-theme" href="#genome-evolution">Genome Evolution &amp; Functional Genomics</a>
+          <ul>
+            <li><a href="#insect-adaptation">How mobile DNA helps insects adapt</a></li>
+            <li><a href="#bumblebee-brain">Transposon-derived genes in the bumblebee brain</a></li>
+            <li><a href="#short-tandem-repeats">Short tandem repeats and local adaptation</a></li>
+          </ul>
+        </div>
+        <div class="contents-group">
+          <a class="contents-theme" href="#multi-omics-resources">Multi-omics Resources &amp; Community Infrastructure</a>
+          <ul>
+            <li><a href="#ibumblebee">iBumblebee</a></li>
+          </ul>
+        </div>
+        <div class="contents-group">
+          <a class="contents-theme" href="#machine-learning">Machine Learning for Biological Discovery</a>
+          <ul>
+            <li><a href="#buzzid">BuzzID</a></li>
+            <li><a href="#fusionbert">FusionBERT-CNN</a></li>
+            <li><a href="#ancient-glass">Ancient glass classification</a></li>
+          </ul>
+        </div>
       </nav>
       <div class="research-articles">
-        <article class="research-article" id="insect-adaptation">
-          <p class="kicker">Repeats &amp; transposable elements · Published review</p>
-          <h2>How mobile DNA helps insects adapt</h2>
-          <p>Transposable elements can move to new places in a genome. In our review, Cheng Sun and I examined cases where this activity changes a trait that matters to the insect, from surviving an insecticide to developing a different wing pattern.</p>
-          <p>We traced four routes by which active elements contribute to adaptation. They can alter gene expression, rearrange chromosomes, change epigenetic regulation or move between species. The figures below connect these mechanisms to examples from insects.</p>
-          <aside class="article-paper" aria-label="Related publication"><p>The adaptive roles of active transposable elements in insect hosts.</p><p><strong>Lv, J.</strong>, &amp; Sun, C. (2027). <i>Current Opinion in Insect Science, 79</i>, 101619.</p><a class="more" href="https://doi.org/10.1016/j.cois.2026.101619">doi:10.1016/j.cois.2026.101619 <span aria-hidden="true">↗</span></a></aside>
-          <div class="figure-set" aria-label="Review figures">
-              <figure><a href="assets/images/te-mechanisms.webp" data-enlarge><img src="assets/images/te-mechanisms.webp" alt="Diagram of gene expression, structural variation, epigenetic effects and horizontal transfer." loading="lazy" width="1290" height="823"></a><figcaption>Four routes by which active transposable elements can influence adaptation.</figcaption></figure>
-              <figure><a href="assets/images/te-traits.webp" data-enlarge><img src="assets/images/te-traits.webp" alt="Six panels show insect traits associated with transposable element activity." loading="lazy" width="1391" height="685"></a><figcaption>Examples include insecticide resistance, wing coloration and tolerance of harsh climates.</figcaption></figure>
-          </div>
-        </article>
+        <section class="research-theme" id="genome-evolution" aria-labelledby="genome-evolution-title">
+          <header class="theme-heading"><h2 id="genome-evolution-title">Genome Evolution &amp; Functional Genomics</h2></header>
+          <article class="research-article" id="insect-adaptation">
+            <p class="kicker">Repeats &amp; transposable elements · Published review</p>
+            <h3 class="article-title">How mobile DNA helps insects adapt</h3>
+            <p><strong>Transposable elements are amazing!</strong> Often viewed as genomic troublemakers, active transposable elements have been linked to genome instability, aging, and various diseases. Yet recent studies have revealed another fascinating side: they can also contribute to host adaptation, as seen in insects!</p>
+            <p>In our review, Cheng Sun and I summarized four non-mutually exclusive mechanisms through which active transposable elements can reshape genomes and gene regulation, potentially contributing to host adaptation. We highlighted fascinating examples, from surviving insecticides to developing new wing patterns.</p>
+            <div class="figure-set" aria-label="Review figures">
+                <figure><a href="assets/images/te-mechanisms.webp" data-enlarge><img src="assets/images/te-mechanisms.webp" alt="Diagram of gene expression, structural variation, epigenetic effects and horizontal transfer." loading="lazy" width="1290" height="823"></a><figcaption>Four routes by which active transposable elements can influence adaptation.</figcaption></figure>
+                <figure><a href="assets/images/te-traits.webp" data-enlarge><img src="assets/images/te-traits.webp" alt="Six panels show insect traits associated with transposable element activity." loading="lazy" width="1391" height="685"></a><figcaption>Examples include insecticide resistance, wing coloration and tolerance of harsh climates.</figcaption></figure>
+            </div>
+            <aside class="article-paper" aria-label="Related publication"><p>The adaptive roles of active transposable elements in insect hosts.</p><p><strong>Lv, J.</strong>, &amp; Sun, C. (2027). <i>Current Opinion in Insect Science, 79</i>, 101619.</p><a class="more" href="https://doi.org/10.1016/j.cois.2026.101619">doi:10.1016/j.cois.2026.101619 <span aria-hidden="true">↗</span></a></aside>
+          </article>
 
-        <article class="research-article" id="bumblebee-brain">
-          <p class="kicker">Repeats &amp; transposable elements · Master’s thesis in progress</p>
-          <h2>Transposon-derived genes in the bumblebee brain</h2>
-          <p>We combine single-cell, bulk and long-read RNA sequencing with evolutionary analyses to understand how transposable elements become host genes. We have identified domesticated transposon-derived genes that may play regulatory roles in bumblebee neurons.</p>
-          <p>This research is ongoing. The figures below show selected stages and results from the work so far.</p>
-          <div class="figure-set thesis-figures" aria-label="Bumblebee brain research figures">
-              <figure><a href="assets/images/te-brain-1.png" data-enlarge><img src="assets/images/te-brain-1.png" alt="Single-nucleus RNA-seq annotation of the bumblebee brain, with cell clusters and marker-gene expression." loading="lazy" width="1113" height="533"></a><figcaption><strong>1. Brain cell annotation.</strong> Single-nucleus RNA sequencing identifies and annotates cell types in the bumblebee brain.</figcaption></figure>
-              <figure><a href="assets/images/te-brain-2.png" data-enlarge><img src="assets/images/te-brain-2.png" alt="Cell-type expression heatmap and violin plots for four domesticated transposon-derived genes." loading="lazy" width="1335" height="762"></a><figcaption><strong>2. Neuron-specific expression.</strong> The first four genes in the heatmap show neuron-specific expression. The violin plots below resolve their expression across neuronal cell types.</figcaption></figure>
-              <figure><a href="assets/images/te-brain-3.png" data-enlarge><img src="assets/images/te-brain-3.png" alt="Bulk RNA-seq expression profiles of domesticated transposon-derived genes across head and other tissues." loading="lazy" width="1152" height="912"></a><figcaption><strong>3. Tissue expression profiles.</strong> Bulk RNA-seq profiles reveal head-specific expression among domesticated transposon-derived genes.</figcaption></figure>
-              <figure><a href="assets/images/te-brain-4.png" data-enlarge><img src="assets/images/te-brain-4.png" alt="Long-read transcript evidence for independent expression of a mariner insertion within ARV1." loading="lazy" width="1295" height="913"></a><figcaption><strong>4. An independently expressed mariner insertion.</strong> Long-read sequencing resolves a mariner insertion within ARV1: the inserted element is expressed independently, without forming a chimeric ARV1–mariner transcript.</figcaption></figure>
-              <figure><a href="assets/images/te-brain-5.png" data-enlarge><img src="assets/images/te-brain-5.png" alt="Transcriptional activation domain predictions and the domain structure of a piggyBac-derived protein, showing the DDD-to-DDN catalytic motif change." loading="lazy" width="1807" height="694"></a><figcaption><strong>5. Domestication as a regulatory factor.</strong> The N-terminus of this piggyBac-derived protein may contain a transcriptional activation domain. The catalytic motif has degenerated from DDD to DDN, while the DNA-binding domain is retained, reflecting domestication as a regulatory factor.</figcaption></figure>
-          </div>
-        </article>
+          <article class="research-article" id="bumblebee-brain">
+            <p class="kicker">Repeats &amp; transposable elements · Master’s thesis in progress</p>
+            <h3 class="article-title">Transposon-derived genes in the bumblebee brain</h3>
+            <p>Transposable elements were long dismissed as “junk DNA,” with inactive copies left to decay in the genomic junkyard. Our ongoing research traces a different story in bumblebees: repeated domestication of transposable elements as brain-expressed genes, from around 80 million years ago to the present.</p>
+            <p>Some of these genes are now specifically expressed in the bumblebee nervous system and may play regulatory roles, which we are testing. This sketch illustrates the scientific story behind our research.</p>
+            <figure class="hypothesis-figure">
+              <a href="assets/images/transposon-domestication.png" data-enlarge><img src="assets/images/transposon-domestication.png" width="2172" height="724" alt="The March of Progress of a Transposable Element, illustrating the scientific story behind our research on transposon-derived brain-expressed genes." loading="lazy"></a>
+            </figure>
+            <p>We combine single-cell, bulk and long-read RNA sequencing with evolutionary analyses to understand how transposable elements become host genes. We have identified domesticated transposon-derived genes that may play regulatory roles in bumblebee neurons.</p>
+            <p>This research is ongoing. The figures below show selected stages and results from the work so far.</p>
+            <div class="figure-set thesis-figures" aria-label="Bumblebee brain research figures">
+                <figure><a href="assets/images/te-brain-1.png" data-enlarge><img src="assets/images/te-brain-1.png" alt="Single-nucleus RNA-seq annotation of the bumblebee brain, with cell clusters and marker-gene expression." loading="lazy" width="1113" height="533"></a><figcaption><strong>1. Brain cell annotation.</strong> Single-nucleus RNA sequencing identifies and annotates cell types in the bumblebee brain.</figcaption></figure>
+                <figure><a href="assets/images/te-brain-2.png" data-enlarge><img src="assets/images/te-brain-2.png" alt="Cell-type expression heatmap and violin plots for four domesticated transposon-derived genes." loading="lazy" width="1335" height="762"></a><figcaption><strong>2. Neuron-specific expression.</strong> The first four genes in the heatmap show neuron-specific expression. The violin plots below resolve their expression across neuronal cell types.</figcaption></figure>
+                <figure><a href="assets/images/te-brain-3.png" data-enlarge><img src="assets/images/te-brain-3.png" alt="Bulk RNA-seq expression profiles of domesticated transposon-derived genes across head and other tissues." loading="lazy" width="1152" height="912"></a><figcaption><strong>3. Tissue expression profiles.</strong> Bulk RNA-seq profiles reveal head-specific expression among domesticated transposon-derived genes.</figcaption></figure>
+                <figure><a href="assets/images/te-brain-4.png" data-enlarge><img src="assets/images/te-brain-4.png" alt="Long-read transcript evidence for independent expression of a mariner insertion within ARV1." loading="lazy" width="1295" height="913"></a><figcaption><strong>4. An independently expressed mariner insertion.</strong> Long-read sequencing resolves a mariner insertion within ARV1: the inserted element is expressed independently, without forming a chimeric ARV1–mariner transcript.</figcaption></figure>
+                <figure><a href="assets/images/te-brain-5.png" data-enlarge><img src="assets/images/te-brain-5.png" alt="Transcriptional activation domain predictions and the domain structure of a piggyBac-derived protein, showing the DDD-to-DDN catalytic motif change." loading="lazy" width="1807" height="694"></a><figcaption><strong>5. Domestication as a potential regulatory factor.</strong> The N-terminus of this piggyBac-derived protein may contain a transcriptional activation domain. The catalytic motif has degenerated from DDD to DDN, while the DNA-binding domain is retained, reflecting domestication as a potential regulatory factor.</figcaption></figure>
+            </div>
+          </article>
 
-        <article class="research-article" id="ibumblebee">
-          <p class="kicker">Bioinformatics platforms · Live database</p>
-          <h2>iBumblebee</h2>
-          <p>iBumblebee brings together genomes, transcriptomes, population data and epigenomic resources across <i>Bombus</i> species. Researchers can browse assemblies, examine gene expression and compare species within a single resource.</p>
-          <p>I led the database project, designing its architecture and interface and building the data processing workflows. My work spans data curation and quality control; annotation of protein-coding genes, non-coding RNAs and repeats; and comparative analyses of orthologs, synteny and positive selection. I also integrated JBrowse2 and SynVisio for genome exploration.</p>
-          <aside class="article-paper" aria-label="Related manuscript"><p>iBumblebee, an integrated multi-omics database resource for genus-wide bumblebee species.</p><p><i>Molecular Ecology Resources</i> · In revision</p><a class="more" href="index.html#pub-ibumblebee">Full author list &amp; citation <span aria-hidden="true">→</span></a></aside>
-          <a class="more" href="https://ngdc.cncb.ac.cn/ibumblebee/">Visit iBumblebee <span aria-hidden="true">↗</span></a>
-          <section class="database-overview" aria-labelledby="overview-title">
-              <h3 id="overview-title">Platform overview</h3>
-              <div class="figure-set" aria-label="Database architecture">
-                <figure><a href="assets/images/ibumblebee.webp" data-enlarge><img src="assets/images/ibumblebee.webp" width="1157" height="662" alt="Architecture overview of genomic resources, annotations and analysis tools in iBumblebee." loading="lazy"></a><figcaption>The data resources and analysis tools that make up iBumblebee.</figcaption></figure>
-              </div>
-          </section>
-        </article>
+          <article class="research-article" id="short-tandem-repeats">
+            <p class="kicker">Repeat variation · Population genomics</p>
+            <h3 class="article-title">Short tandem repeats and local adaptation</h3>
+            <p>Our study connects short tandem repeat length variation to gene expression and environmental adaptation in <i>Bombus pyrosoma</i>. Combining a telomere-to-telomere genome assembly with population resequencing and RNA-seq, the team identified expression-associated repeats and tested their effects on promoter activity and cold tolerance.</p>
+            <p>I contributed to genome quality assessment, annotation, exploratory co-expression analysis and field sampling. I also helped design and interpret regression, Pearson correlation and Bayenv2 analyses connecting repeat length with expression and environmental variation.</p>
+            <aside class="article-paper" aria-label="Related publication"><p>Short tandem repeats facilitate local adaptation in bumblebee.</p><p><i>Science Advances</i> · Accepted November 2026</p><a class="more" href="index.html#pub-str">Full author list &amp; citation <span aria-hidden="true">→</span></a></aside>
+          </article>
+        </section>
 
-        <article class="research-article" id="short-tandem-repeats">
-          <p class="kicker">Repeat variation · Population genomics</p>
-          <h2>Short tandem repeats and local adaptation</h2>
-          <p>Our study connects short tandem repeat length variation to gene expression and environmental adaptation in <i>Bombus pyrosoma</i>. Combining a telomere-to-telomere genome assembly with population resequencing and RNA-seq, the team identified expression-associated repeats and tested their effects on promoter activity and cold tolerance.</p>
-          <p>I contributed to genome quality assessment, annotation, exploratory co-expression analysis and field sampling. I also helped design and interpret regression, Pearson correlation and Bayenv2 analyses connecting repeat length with expression and environmental variation.</p>
-          <aside class="article-paper" aria-label="Related publication"><p>Short tandem repeats facilitate local adaptation in bumblebee.</p><p><i>Science Advances</i> · Accepted November 2026</p><a class="more" href="index.html#pub-str">Full author list &amp; citation <span aria-hidden="true">→</span></a></aside>
-        </article>
+        <section class="research-theme" id="multi-omics-resources" aria-labelledby="multi-omics-resources-title">
+          <header class="theme-heading"><h2 id="multi-omics-resources-title">Multi-omics Resources &amp; Community Infrastructure</h2></header>
+          <article class="research-article" id="ibumblebee">
+            <p class="kicker">Bioinformatics platforms · Live database</p>
+            <h3 class="article-title">iBumblebee</h3>
+            <p>iBumblebee brings together genomes, transcriptomes, population data and epigenomic resources across <i>Bombus</i> species. Researchers can browse assemblies, explore genomic features, and compare species within a single resource.</p>
+            <p>I led the database project, designing its architecture and interface and building the data processing workflows. My work spans data curation and quality control; annotation of protein-coding genes, non-coding RNAs and repeats; and comparative analyses of orthologs, synteny and positive selection. I also integrated JBrowse2 and SynVisio for genome exploration.</p>
+            <aside class="article-paper" aria-label="Related manuscript"><p>iBumblebee, an integrated multi-omics database resource for genus-wide bumblebee species.</p><p><i>Molecular Ecology Resources</i> · In revision</p><a class="more" href="index.html#pub-ibumblebee">Full author list &amp; citation <span aria-hidden="true">→</span></a></aside>
+            <a class="more" href="https://ngdc.cncb.ac.cn/ibumblebee/">Visit iBumblebee <span aria-hidden="true">↗</span></a>
+            <section class="database-overview" aria-labelledby="overview-title">
+                <h4 id="overview-title">Platform overview</h4>
+                <div class="figure-set" aria-label="Database architecture">
+                  <figure><a href="assets/images/ibumblebee.webp" data-enlarge><img src="assets/images/ibumblebee.webp" width="1157" height="662" alt="Architecture overview of genomic resources, annotations and analysis tools in iBumblebee." loading="lazy"></a><figcaption>The data resources and analysis tools that make up iBumblebee.</figcaption></figure>
+                </div>
+            </section>
+          </article>
+        </section>
 
-        <article class="research-article" id="modeling">
-          <p class="kicker">Mathematical modeling · Machine learning · AI for Science</p>
-          <h2>Modeling &amp; AI</h2>
-          <p>My background in programming, machine learning and mathematical modeling at Chongqing University of Posts and Telecommunications shaped how I approach biology. I’m especially interested in models that help us interpret the biology behind a prediction.</p>
-          <h3>BuzzID</h3><p>BuzzID identifies bumblebee species from a DNA barcode, with the option to include a specimen photograph. The model supports 109 <i>Bombus</i> species and is also available through iBumblebee.</p>
-          <div class="article-links"><a class="more" href="https://github.com/jingtinglv/Buzzid">View code <span aria-hidden="true">↗</span></a><a class="more" href="https://ngdc.cncb.ac.cn/ibumblebee/species-identification">Try species identification <span aria-hidden="true">↗</span></a></div>
-          <section class="fusion-project" id="fusionbert" aria-labelledby="fusion-title">
-            <div class="fusion-heading"><h3 id="fusion-title">FusionBERT-CNN</h3><p>2024 Greater Bay Area Cup · AI for Science</p></div>
+        <section class="research-theme" id="machine-learning" aria-labelledby="machine-learning-title">
+          <header class="theme-heading"><h2 id="machine-learning-title">Machine Learning for Biological Discovery</h2></header>
+          <p class="theme-intro" id="modeling">My background in programming, machine learning and mathematical modeling at Chongqing University of Posts and Telecommunications shaped how I approach biology. I’m especially interested in models that help us interpret the biology behind a prediction.</p>
+          <article class="research-article" id="buzzid">
+            <h3 class="article-title">BuzzID</h3><p>BuzzID identifies bumblebee species from a DNA barcode, with the option to include a specimen photograph. The model supports 109 <i>Bombus</i> species and is also available through iBumblebee.</p>
+            <div class="article-links"><a class="more" href="https://github.com/jingtinglv/Buzzid">View code <span aria-hidden="true">↗</span></a><a class="more" href="https://ngdc.cncb.ac.cn/ibumblebee/species-identification">Try species identification <span aria-hidden="true">↗</span></a></div>
+          </article>
+
+          <article class="research-article fusion-project" id="fusionbert" aria-labelledby="fusion-title">
+            <div class="fusion-heading"><h3 class="article-title" id="fusion-title">FusionBERT-CNN</h3><p>2024 Greater Bay Area Cup · AI for Science</p></div>
             <p>I developed FusionBERT-CNN to classify genes into high- and low-expression groups in the human GM12878 cell line. I combined promoter sequences with mRNA half-life features, then extended the model with chromatin accessibility data.</p>
             <figure class="model-architecture">
               <a href="assets/images/fusion-architecture.jpg" data-enlarge><img src="assets/images/fusion-architecture.jpg" width="1386" height="780" alt="FusionBERT-CNN architecture, showing the DNABERT-2 sequence encoder, convolutional feature extraction, multimodal fusion and expression classifier." loading="lazy"></a>
@@ -132,9 +159,13 @@
                 <figure><a href="assets/images/fusion-low-tokens-low-expression.jpg" data-enlarge><img src="assets/images/fusion-low-tokens-low-expression.jpg" width="6000" height="1500" alt="Position counts of the same low-expression-associated tokens distributed throughout low-expression sequences." loading="lazy"></a><figcaption><strong>Low-expression genes.</strong> The same tokens are distributed across the sequence, without the central depletion seen in high-expression genes.</figcaption></figure>
               </div>
             </details>
-          </section>
-          <h3>Ancient glass classification</h3><p>In the 2022 China Undergraduate Mathematical Contest in Modeling, I used random forests to select features for classifying ancient glass.</p>
-        </article>
+          </article>
+
+          <article class="research-article" id="ancient-glass">
+            <h3 class="article-title">Ancient glass classification</h3>
+            <p>In the 2022 China Undergraduate Mathematical Contest in Modeling, I developed an improved random forest-based feature selection method and combined it with K-means clustering to classify ancient glass and identify weathering-related subtypes.</p>
+          </article>
+        </section>
       </div>
     </div>
   </main>

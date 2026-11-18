@@ -38,6 +38,9 @@ if (sectionLinks) {
       if (item === selected) item.link.setAttribute("aria-current", "location");
       else item.link.removeAttribute("aria-current");
     }
+    for (const group of sectionLinks.querySelectorAll(".contents-group")) {
+      group.toggleAttribute("data-current", group.contains(selected.link));
+    }
   }
   function scheduleUpdate() {
     if (scheduled) return;
@@ -111,7 +114,15 @@ if (typeof HTMLDialogElement !== "undefined" && "showModal" in HTMLDialogElement
     event.preventDefault();
     image.src = link.href;
     image.alt = link.querySelector("img").alt;
-    caption.textContent = link.closest("figure").querySelector("figcaption").textContent;
+    const figureCaption = link.closest("figure").querySelector("figcaption");
+    caption.textContent = figureCaption ? figureCaption.textContent : "";
+    if (figureCaption) {
+      dialog.setAttribute("aria-labelledby", "image-caption");
+      dialog.removeAttribute("aria-label");
+    } else {
+      dialog.removeAttribute("aria-labelledby");
+      dialog.setAttribute("aria-label", image.alt);
+    }
     dialog.showModal();
     close.focus();
   });
